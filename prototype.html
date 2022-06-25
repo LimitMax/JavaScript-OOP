@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProtoType</title>
+  </head>
+  <body>
+    <script>
+      //Constructor Function
+      function president() {
+        this.firstName;
+        this.middleName;
+        this.lastName;
+        this.sayHello = function (nama) {
+          console.log(`Hello ${nama}, My name is ${this.firstName} ${this.middleName} ${this.lastName}`);
+        };
+      }
+
+      //Menambah protoType
+      president.prototype.sayHai = function (name) {
+        console.log(`Hai ${name}`);
+      };
+
+      president.prototype.run = function () {
+        console.log(`${this.firstName} is onFire`);
+      };
+
+      //Panggil
+      const presiden = new president();
+      presiden.firstName = "Taufiq";
+      presiden.middleName = "Qurohman";
+      presiden.lastName = "Ruki";
+      presiden.sayHello("Vina");
+      presiden.sayHai("Ayu");
+      presiden.run();
+
+      console.log(presiden);
+    </script>
+  </body>
+</html>

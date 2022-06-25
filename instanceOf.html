@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instance Of</title>
+  </head>
+  <body>
+    <script>
+      //class
+      class President {}
+
+      class vicePresident {}
+
+      //panggil
+      const president = new President();
+      const vc = new vicePresident();
+
+      //InstanceOf untuk mengecek apakah suatu object itu sama atau tidak
+      console.info(president instanceof President);
+      console.info(vc instanceof President);
+    </script>
+  </body>
+</html>

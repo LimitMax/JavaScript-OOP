@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructor Inheritance</title>
+  </head>
+  <body>
+    <script>
+      //constructor Function
+      function president() {
+        this.firstName = "";
+        this.lastName = "";
+        this.sayAnything = function (nama) {
+          console.info(`Hai ${nama} , My name is ${this.firstName} ${this.lastName} sebagai President`);
+        };
+      }
+
+      //Constructor Inheritance
+      function vicePresident() {
+        president.call(this);
+        this.sayAnything = function (nama) {
+          console.info(`Hai ${nama} , My name is ${this.firstName} ${this.lastName} sebagai Vice President`);
+        };
+      }
+
+      //Panggil
+      const vP = new vicePresident();
+      vP.firstName = "Taufiq";
+      vP.lastName = "Qurohman";
+      vP.sayAnything("Vina");
+    </script>
+  </body>
+</html>
